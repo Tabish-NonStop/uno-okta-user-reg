@@ -8,16 +8,18 @@ import lombok.*;
 
 @Getter
 @Setter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @Entity
-public class Student {
+public class RegisteredStudent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String name;
     private String email;
-    private String password;
+    private String oktaUserId;
+
+
 }
